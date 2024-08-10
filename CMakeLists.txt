@@ -6,7 +6,7 @@ cmake_minimum_required(VERSION 3.21)
 
 # Only set the cxx_standard if it is not set by someone else
 if (NOT DEFINED CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 20)
+  set(CMAKE_CXX_STANDARD 17)
 endif()
 
 # strongly encouraged to enable this globally to avoid conflicts between
@@ -104,7 +104,7 @@ include(cmake/PackageProject.cmake)
 # we know we want to ship
 myproject_package_project(
   TARGETS
-  intro
+  tlm
   myproject_options
   myproject_warnings
   # FIXME: this does not work! CK

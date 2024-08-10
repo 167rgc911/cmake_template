@@ -17,7 +17,7 @@ function(myproject_setup_dependencies)
       NAME
       spdlog
       VERSION
-      1.11.0
+      1.14.1
       GITHUB_REPOSITORY
       "gabime/spdlog"
       OPTIONS
@@ -37,7 +37,7 @@ function(myproject_setup_dependencies)
   endif()
 
   if(NOT TARGET tools::tools)
-    cpmaddpackage("gh:lefticus/tools#update_build_system")
+    cpmaddpackage("gh:167rgc911/tools#update_build_system")
   endif()
 
 endfunction()
