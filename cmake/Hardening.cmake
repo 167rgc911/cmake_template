@@ -17,7 +17,7 @@ macro(
     set(NEW_CXX_DEFINITIONS "${NEW_CXX_DEFINITIONS} -D_GLIBCXX_ASSERTIONS")
     message(STATUS "*** GLIBC++ Assertions (vector[], string[], ...) enabled")
 
-    # on Alpine Linux turn -D_FORTIFY_SOURCE=0
+    # on Alpine Linux host turn -D_FORTIFY_SOURCE=0
     if (NOT ${CMAKE_BUILD_TYPE} STREQUAL "Debug")
       set(NEW_COMPILE_OPTIONS "${NEW_COMPILE_OPTIONS} -U_FORTIFY_SOURCE -D_FORTIFY_SOURCE=3")
       message(STATUS "*** g++/clang _FORTIFY_SOURCE=3 enabled")
